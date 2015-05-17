@@ -1,0 +1,93 @@
+package common;
+
+message FoodDesList {
+	repeated FoodDes list = 1;
+}
+message FoodDes {
+	required string NDB_No = 1;
+	required string FdGrp_Cd = 2;
+	optional string Long_Desc = 3;
+	optional string Shrt_Desc = 4;
+	optional string ComName = 5;
+	optional string ManufacName = 6;
+	optional string Survey = 7;
+	optional string Ref_desc = 8;
+	optional int32 Refuse = 9;
+	optional string SciName = 10;
+	optional float N_Factor = 11;
+	optional float Pro_Factor = 12;
+	optional float Fat_Factor = 13;
+	optional float CHO_Factor = 14;
+}
+
+message FoodDesDetails {
+	required string NDB_No = 1;
+	optional NutDatList NutDatList = 2;
+	optional WeightGramList WeightGramList = 3;
+}
+
+message FoodDesDetailsList {
+	repeated FoodDesDetails list = 1;
+}
+
+
+message FoodGrp {
+	required string FdGrp_Cd  = 1;
+	optional string FdGrp_Desc = 2;
+}
+
+message FoodGrpList {
+	repeated FoodGrp list = 1;
+}
+
+message NutDat {
+	required string NDB_No = 1;
+	required string Nutr_No  = 2;
+	optional float Nutr_Val = 3;
+	optional float Num_Data_Pts = 4;
+	optional float Std_Error = 5;
+	optional string Src_Cd = 6;
+	optional string Deriv_Cd = 7;
+	optional string Ref_NDB_No = 8;
+	optional string Add_Nutr_Mark = 9;
+	optional int32 Num_Studies = 10;
+	optional float Min = 11;
+	optional float Max = 12;
+	optional int32 DF = 13;
+	optional float Low_EB = 14;
+	optional float Up_EB = 15;
+	optional string Stat_cmt = 16;
+	optional string AddMod_Date = 17;
+	optional string CC = 18;
+}
+
+message NutDatList {
+	repeated NutDat list = 1;
+}
+
+message WeightGram {
+	required string NDB_No = 1;
+	optional string Seq = 2;
+	optional float Amount = 3;
+	optional string Msre_Desc = 4;
+	optional float Gm_Wgt = 5;
+	optional int32 Num_Data_Pts = 6;
+	optional float Std_Dev = 7;
+}
+
+message WeightGramList {
+	repeated WeightGram list = 1;
+}
+
+message NutrDef {
+	required string Nutr_No = 1;
+	optional string Units = 2;
+	optional string Tagname = 3;
+	optional string NutrDesc = 4;
+	optional string Num_Dec = 5;
+	optional int32 SR_Order = 6;
+}
+
+message NutrDefList {
+	repeated NutrDef list = 1;
+}

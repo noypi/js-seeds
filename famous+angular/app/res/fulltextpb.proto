@@ -1,0 +1,10 @@
+package common;
+
+message FulltextPb {
+	required string key = 1;
+	repeated string ids = 2;
+}
+
+message FulltextListPb {
+	repeated FulltextPb List = 1;
+}
